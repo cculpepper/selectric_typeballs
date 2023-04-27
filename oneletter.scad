@@ -4,7 +4,7 @@
 // Letters extend out 0.6875" from the center of the typeball
 // The ball itself has a radius of around 0.6625"
 // According to John Savard, the platen has a radius around 0.717" or so (http://www.quadibloc.com/comp/pro04.htm)
-letterRadius = 0.6875*25.4;
+letterRadius = 0.689*25.4;
 ballRadius = 0.6625*25.4;
 platenRadius = 0.717*25.4;
 
@@ -28,5 +28,5 @@ minkowski() {
     translate([0, 0.5, 0]) rotate([90, 0, 0]) linear_extrude(.55) translate([0, -fontSize/2, 0]) text(glyph, size=fontSize, halign="center", font=myFont);
     translate([0, platenRadius, 0]) rotate([0, 90, 0]) cylinder(h=20, r=platenRadius, $fn=360, center=true);
   }
-  rotate([90, 0, 0]) cylinder(h=1, r1=0, r2=.9);
+  rotate([90, 0, 0]) cylinder(h=1, r1=0, r2=.2);
 }
